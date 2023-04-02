@@ -1,0 +1,67 @@
+{
+"collection": {
+"info": {
+"_postman_id": "7a6bb95e-49c8-465b-82f5-275dea7854d2",
+"name": "Talawa API",
+"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+"updatedAt": "2023-04-02T15:24:38.000Z"
+},
+"item": [
+{
+"name": "getOrganizations",
+"id": "8600af2f-152d-4c4b-a814-c723e9a44336",
+"protocolProfileBehavior": {
+"disableBodyPruning": true
+},
+"request": {
+"method": "POST",
+"header": [],
+"body": {
+"mode": "graphql",
+"graphql": {
+"query": "query{ organizations( orderBy: id_ASC ){ name } }",
+"variables": ""
+}
+},
+"url": {
+"raw": "{{baseUrl}}",
+"host": [
+"{{baseUrl}}"
+]
+}
+},
+"response": []
+}
+],
+"event": [
+{
+"listen": "prerequest",
+"script": {
+"id": "99102137-2907-4d5d-9a2f-02eaf4a6b7e4",
+"type": "text/javascript",
+"exec": [
+""
+]
+}
+},
+{
+"listen": "test",
+"script": {
+"id": "a509a37c-49d9-4735-8964-6f08ba69a45b",
+"type": "text/javascript",
+"exec": [
+""
+]
+}
+}
+],
+"variable": [
+{
+"id": "b451ca53-a504-436a-9f0b-096abfb0a50c",
+"key": "baseUrl",
+"value": "https://talawaapi.azurewebsites.net/graphql",
+"type": "string"
+}
+]
+}
+}
